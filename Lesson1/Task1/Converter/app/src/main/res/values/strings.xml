@@ -4,4 +4,8 @@
     <string name="celsius">Цельсия</string>
     <string name="fahrenheit">Фаренгейта</string>
     <string name="to_fahrenheit">В фаренгейты</string>
+    <string name="kilometer_per_hour">км/ч</string>
+    <string name="metr_per_second">м/с</string>
+    <string name="to_metr_per_second">В м/с</string>
+
 </resources>

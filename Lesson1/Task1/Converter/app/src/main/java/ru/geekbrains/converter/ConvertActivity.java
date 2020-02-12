@@ -10,12 +10,17 @@ public class ConvertActivity extends AppCompatActivity {
     private EditText sourceText;    // Элемент с входным значением, которое надо сконвертировать
     private EditText destText;      // Элемент с результирующим значением
 
+    private EditText sourceKilometrPerHour;
+    private EditText destMetrPerSec;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_convert);
         sourceText = (EditText) findViewById(R.id.celsiusValue);
         destText = (EditText) findViewById(R.id.fahrenheitValue);
+        sourceKilometrPerHour = findViewById(R.id.kilometersValue);
+        destMetrPerSec = findViewById(R.id.metrValue);
     }
 
     // обработка нажатия
@@ -28,5 +33,12 @@ public class ConvertActivity extends AppCompatActivity {
         float destValue = converter.Convert(new ConvertToFahrenheit()).GetResult();
         // записать результат в элемент
         destText.setText(String.format("%.02f", destValue));
+    }
+
+    public void onToMetrPerSecondClick(View view) {
+        float sourceValue = Float.parseFloat(sourceKilometrPerHour.getText().toString());
+        Converter converter = new Converter(sourceValue);
+        float destValue = converter.Convert(new ConvertToMetrPerSecond()).GetResult();
+        destMetrPerSec.setText(String.format("%.02f", destValue));
     }
 }

@@ -6,6 +6,6 @@
     android:layout_height="match_parent"
     tools:context="ru.geekbrains.converter.ConvertActivity">
 
-    <include layout="@layout/content_convert" />
+    <include layout="@layout/content_convert_ms" />
 
 </android.support.design.widget.CoordinatorLayout>
