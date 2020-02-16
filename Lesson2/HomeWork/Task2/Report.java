@@ -10,7 +10,8 @@ class Report{
 	}
 	
 	public void output(){
-		PrintReport reportPrint = new PrintReport();
-		reportPrint.output(items);
+		IReport printReport = new PrintReport();
+		ReportDecorator decorator = new DisplayReport(printReport);
+		decorator.output(items);
 	}
 }
