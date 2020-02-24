@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">lesson04Interview</string>
+    <string name="fragment_lifecycle">Fragment Lifecycle</string>
+    <string name="main_activity">Main Activity</string>
+    <string name="show">Show</string>
+    <string name="hide">Hide</string>
+</resources>
